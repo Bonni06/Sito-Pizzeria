@@ -1,0 +1,119 @@
+body {
+    font-family: 'Georgia', serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.header {
+    background: #8B0000; /* Rosso Scuro Elegante */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif; /* Font più elegante */
+}
+
+.menu-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #8B0000;
+    border-bottom: 2px solid #D3D3D3;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Stile Accordion (Menu Online) */
+.accordion-item {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+    padding: 18px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: background 0.3s;
+}
+
+.accordion-header:hover {
+    background: #fff8f8;
+}
+
+.pizza-name-header {
+    color: #333;
+}
+
+.pizza-price-header {
+    color: #8B0000;
+    font-size: 1.3em;
+}
+
+.accordion-content {
+    display: none;
+    padding: 20px;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
+    text-align: center;
+    animation: slideDown 0.3s ease-out;
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+.accordion-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion-content p {
+    text-align: left;
+    font-style: italic;
+    color: #555;
+}
+
+/* --- Media Query per Schermi Più Grandi (Menu Screen/TV) --- */
+@media (min-width: 1024px) {
+    /* Questi stili sono solo per l'aspetto elegante,
+       la logica di griglia e refresh è in menu_screen.php */
+    .screen-menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dotted #ccc;
+        margin-bottom: 5px;
+    }
+    .screen-menu-item strong {
+        font-size: 1.3em;
+        color: #333;
+    }
+    .screen-menu-price {
+        font-size: 1.3em;
+        color: #8B0000;
+        font-weight: bold;
+    }
+}
